@@ -1,25 +1,45 @@
-Parse.initialize("Y0CLQUqpAgyNIY0aA2qx1nW6GWyqM1cUcdKGo2BR", "RZCmPbmSapjeCMfWQNUqmiTfInXos8vxS8xkUBPa");
+'use strict';
+
+Parse.initialize('Y0CLQUqpAgyNIY0aA2qx1nW6GWyqM1cUcdKGo2BR', 'RZCmPbmSapjeCMfWQNUqmiTfInXos8vxS8xkUBPa');
 
 var Post = Parse.Object.extend ({
-	className: "Post"
+	className: 'Post'
+});
+
+var PostCollection = Parse.Collection.extend({
+    model: Post
+});
+
+var collection = new PostCollection();
+collection.fetch({
+    success: function(collection) {
+        collection.each(function(object) {
+        });
+    },
+    error: function(collection, error) {
+    }
+});
+
+var viewInstance;
+
+// collection.on('add', function(post){
+//     new viewInstance({model: post});
+// });
+
+collection.fetch().done(function () {
+    viewInstance = new PostView({model: collection.first()});
 });
 
 
-var NewPost = new Post;
 
-NewPost.save({
-	URL: "http://4.bp.blogspot.com/-7dLk_lNqsto/T9uRv2B3iGI/AAAAAAAAA9c/DieKOn4Cj2w/s1600/mustache-act.jpg",
-	Comment: "Civil Stash Dude"
-	}).done(function () {
-		console.log('it worked');
-});
-	
-postQuery = new Parse.Query(Post);
 
-postQuery.get("pRcklNnb9X", {
-  success: function(post) {
-  	console.log('post is', post)
-  },
-  error: function(object, error) {
-  }
-});
+// var photos = new PhotoCollection();
+// var detailViewInstance;
+
+// photos.on('add', function(player){
+//     new ThumbnailView({model: player});
+// })
+
+// photos.fetch().done(function () {
+//     detailViewInstance = new DetailView({model: photos.first()})
+// })

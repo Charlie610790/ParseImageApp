@@ -2,30 +2,63 @@
 // endbower
 
 body {
-    background: #fafafa;
+    background: #ecedee;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+    margin: 0px;
+    padding: 0px;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
+.mainContainer {
+    display: block;
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.header {
+    height: 40px;
+    background: linear-gradient(to bottom, #4e7ca1 0%,#33638a 100%);}
+
+.postContainer {
+    margin: 0px auto;
+    background-color: #dedfe0;
+    padding: 30px;
+    width: 500px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.post {
+    display: block;
+}
+
+.commentInput {
+    display: block;
+    padding: 10px;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 5px gray;
+    margin-bottom: 30px;
+
+}
+
+.comment-input {
+    width: 474px;
+    line-height: 25px;
+}
+
+.postImage {
+    display: block;
+}
+
+.statusBar {
+    display: block;
+    height: 30px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.comment {
+    text-align: left;
+    line-height: 50px;
+    padding-left: 20px;
+    background-color: #fafafa;
+    height: 50px;
+    box-shadow: 0px 0px 5px gray;
 }
