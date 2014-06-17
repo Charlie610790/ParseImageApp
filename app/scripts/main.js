@@ -22,10 +22,6 @@ collection.fetch({
 
 var viewInstance;
 
-// collection.on('add', function(post){
-//     new viewInstance({model: post});
-// });
-
 collection.fetch().done(function () {
     viewInstance = new PostView({model: collection.first()});
 })

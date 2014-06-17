@@ -11,11 +11,13 @@ body {
 
 .mainContainer {
     display: block;
+
 }
 
 .header {
     height: 45px;
     background: linear-gradient(to bottom, #4e7ca1 0%,#33638a 100%);
+
 }
 
 .homeButton {
@@ -23,8 +25,9 @@ body {
     margin-left: 13%;
     height: 45px;
     width: 45px;
-    background-size:45px 45px;
+    background-size: 45px 45px;
     background-image: url("http://s21.postimg.org/3sfmdg0kj/Screen_Shot_2014_06_16_at_7_59_03_PM.png");
+
 }
 
 .instagramLogo {
@@ -32,8 +35,9 @@ body {
     margin-left: 30%;
     height: 45px;
     width: 100px;
-    background-size:100px 45px;
+    background-size: 100px 45px;
     background-image: url("http://www.userlogos.org/files/logos/jumpordie/instagram_01.png");
+
 }
 
 .postContainer {
@@ -42,10 +46,12 @@ body {
     padding: 30px;
     width: 500px;
     box-shadow: 0px 0px 4px gray;
+
 }
 
 .post {
     display: block;
+
 }
 
 .commentInput {
@@ -60,10 +66,12 @@ body {
 .comment-input {
     width: 474px;
     line-height: 25px;
+
 }
 
 .postImage {
     display: block;
+
 }
 
 .statusBar {
@@ -71,6 +79,7 @@ body {
     height: 50px;
     background-color: #f6f6f6;
     box-shadow: 0px 0px 4px gray;
+
 }
 
 .likeButton {
@@ -81,6 +90,7 @@ body {
     background-size: 55px 50px;
     background-image: url("http://s30.postimg.org/ozarljmr1/Screen_Shot_2014_06_16_at_8_25_29_PM.png?noCache=1402964753");
     border-right: 2px solid #cacaca;
+
 }
 
 .dotButton {
@@ -100,23 +110,27 @@ body {
     background-color: #fafafa;
     height: 50px;
     box-shadow: 0px 0px 4px gray;
+
 }
 
 @media screen and (max-width: 1020px) {
    .homeButton {
     margin-left: 0%;
+
 }
 
 .instagramLogo {
     margin-left: 40%;
 
 }
+
 }
 
 @media screen and (max-width: 815px) {
     .injuredListContainer {
         display: none;
     }
+
 }
 
 @media screen and (max-width: 400px) {
