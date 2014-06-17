@@ -28,18 +28,4 @@ var viewInstance;
 
 collection.fetch().done(function () {
     viewInstance = new PostView({model: collection.first()});
-});
-
-
-
-
-// var photos = new PhotoCollection();
-// var detailViewInstance;
-
-// photos.on('add', function(player){
-//     new ThumbnailView({model: player});
-// })
-
-// photos.fetch().done(function () {
-//     detailViewInstance = new DetailView({model: photos.first()})
-// })
+})

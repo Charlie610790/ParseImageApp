@@ -26,7 +26,11 @@
 
 
         <div class="mainContainer">
-            <div class="header"></div>
+            <div class="header">
+                <div class="homeButton"></div>
+                <div class="instagramLogo"></div>
+
+            </div>
             <div class="postContainer">
             </div>
         </div>
@@ -36,7 +40,10 @@
         <script type="text/template" class="post-template">
             <div class="postImage"><img src="<%= URL %>" width="500" height="500"/>
             </div>
-            <div class="statusBar"></div>
+            <div class="statusBar">
+                <div class="likeButton"></div>
+                <div class="dotButton"></div>
+            </div>
             <div class="comment"><%= Comment %></div>
             <div class="commentInput">
                 <input class="comment-input" placeholder="Write a comment...">
