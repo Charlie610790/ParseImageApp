@@ -11,17 +11,21 @@ var PostCollection = Parse.Collection.extend({
 });
 
 var collection = new PostCollection();
-collection.fetch({
-    success: function(collection) {
-        collection.each(function(object) {
-        });
-    },
-    error: function(collection, error) {
-    }
-});
+// collection.fetch({
+//     success: function(collection) {
+//     	console.log(collection)
+//         collection.each(function(object) {
+//         });
+//     },
+//     error: function(collection, error) {
+//     }
+// });
 
 var viewInstance;
 
 collection.fetch().done(function () {
-    viewInstance = new PostView({model: collection.first()});
+	collection.each(function(photo){
+	    viewInstance = new PostView({model: photo});
+		
+	})
 })
