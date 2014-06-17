@@ -1,0 +1,1 @@
+"use strict";Parse.initialize("Y0CLQUqpAgyNIY0aA2qx1nW6GWyqM1cUcdKGo2BR","RZCmPbmSapjeCMfWQNUqmiTfInXos8vxS8xkUBPa");var Post=Parse.Object.extend({className:"Post"}),PostCollection=Parse.Collection.extend({model:Post}),collection=new PostCollection,viewInstance;collection.fetch().done(function(){collection.each(function(a){viewInstance=new PostView({model:a})})});
