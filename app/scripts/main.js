@@ -27,41 +27,30 @@ collection.fetch().done(function () {
 	collection.each(function(photo){
 	    viewInstance = new PostView({model: photo});
 		
-	})
-})
+	});
+});
 
 
 //action that happens when the submit button is clicked
 $('.addButton').click(function() {
-    //takse the input value of the message field and assigns it to the var message
-    var message = $('.input').val();
-    //takes the value of the message field and clears it
-    $('.input').val('');
-    //takes the time and sets it at the var time
-    var time = timeRightNow;
+    //takse the input value of the comment field and assigns it to the var message
+    var comment = $('.imageComment').val();
+    //takes the value of the comment field and clears it
+    $('.imageComment').val('');
+    var url = $('.imageURL').val();
+    $('.imageURL').val('');
+
     //creates a new instance of the constructor POST passing the three assigned variables
-    var outgoingPost = new post(url, comment);
+    var outgoingPost = new Post();
 
-    updateChat(outgoingPost);
+    outgoingPost.set({
+        'URL'     :   $('.imageURL').val(),
+        'Comment' :   $('.imageComment').val()
 
-});
+    });
 
-var Post = Parse.Object.extend("Post");
-var post = new Post();
-var message = $('.input').val();
+    outgoingPost.save().done(function () {
+        console.log('It Worked!');
+      });
 
-post.set("URL", 1337);
-post.set("playerName", "Sean Plott");
-post.set("cheatMode", false);
- 
-gameScore.save(null, {
-  success: function(gameScore) {
-    // Execute any logic that should take place after the object is saved.
-    alert('New object created with objectId: ' + gameScore.id);
-  },
-  error: function(gameScore, error) {
-    // Execute any logic that should take place if the save fails.
-    // error is a Parse.Error with an error code and description.
-    alert('Failed to create new object, with error code: ' + error.description);
-  }
 });
