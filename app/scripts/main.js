@@ -42,6 +42,6 @@ $('.addButton').click(function() {
         //takes the value of the comment and image fields and clears it
         $('#imageComment').val('');
         $('#imageURL').val('');
-      });
+    });
 
 });
