@@ -34,23 +34,25 @@ collection.fetch().done(function () {
 //action that happens when the submit button is clicked
 $('.addButton').click(function() {
     //takse the input value of the comment field and assigns it to the var message
-    var comment = $('.imageComment').val();
+    var comment = $('#imageComment').val();
     //takes the value of the comment field and clears it
-    $('.imageComment').val('');
-    var url = $('.imageURL').val();
-    $('.imageURL').val('');
+    $('#imageComment').val('');
+    var url = $('#imageURL').val();
+    $('#imageURL').val('');
 
     //creates a new instance of the constructor POST passing the three assigned variables
     var outgoingPost = new Post();
 
     outgoingPost.set({
-        'URL'     :   $('.imageURL').val(),
-        'Comment' :   $('.imageComment').val()
+        'URL'     :   url,
+        'Comment' :   comment
 
     });
 
     outgoingPost.save().done(function () {
-        console.log('It Worked!');
+        console.log('It Worked!')
+        console.log('url is', url)
+        console.log('comment is', comment);
       });
 
 });
