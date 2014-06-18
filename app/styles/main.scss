@@ -16,6 +16,8 @@ body {
 
 .header {
     height: 45px;
+    position: fixed;
+    width: 100%;
     background: linear-gradient(to bottom, #4e7ca1 0%,#33638a 100%);
 
 }
@@ -51,6 +53,9 @@ body {
 }
 
 .addContainer {
+    position: fixed;
+    margin-top: 45px;
+    margin-left:2px;
     display: inline-block;
     vertical-align: top;
     background-color: #dedfe0;
