@@ -3,13 +3,19 @@
 var PostView = Parse.View.extend({
  
     className: 'post',
+
+    collection: 'collection',
+
  
     postTemplate: _.template($('.post-template').text()),
  
  
     initialize: function(){
-        $('.postContainer').append(this.el);
+        $('.postContainer').prepend(this.el);
         this.render();
+
+        collection.on('add', this.render);
+        collection.on('change', this.render);
     },
  
     render: function(){
