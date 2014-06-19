@@ -44,13 +44,19 @@
         </div>
 
         <script type="text/template" class="post-template">
-            <div class="filtersContainer"></div>
+            <div class="filtersContainer">
+                <div class="grayscaleButton"></div>
+                <div class="sepiaButton"></div>
+                <div class="sepia2Button"></div>
+
+            </div>
             <div class="postImage">
                 <img src="<%= URL %>" width="500" height="500"/>
             </div>
             
             <div class="statusBar">
                 <div class="likeButton"></div>
+                <div class="likeButtonClicked"></div>
                 <div class="dotButton"></div>
             </div>
             <div class="comment"><%= Comment %></div>

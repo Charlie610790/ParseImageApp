@@ -174,7 +174,18 @@ input {
     height: 48px;
     width: 55px;
     background-size: 55px 50px;
-    background-image: url("http://s30.postimg.org/ozarljmr1/Screen_Shot_2014_06_16_at_8_25_29_PM.png?noCache=1402964753");
+    background-image: url("http://s27.postimg.org/6dfhxt1gv/Screen_Shot_2014_06_18_at_10_02_52_PM.png");
+    border-right: 2px solid #cacaca;
+
+}
+
+.likeButtonClicked {
+    display: none;
+    margin-left: 0%;
+    height: 48px;
+    width: 55px;
+    background-size: 55px 50px;
+    background-image: url("http://s27.postimg.org/k8idu0l9r/Screen_Shot_2014_06_18_at_10_02_01_PM.png");
     border-right: 2px solid #cacaca;
 
 }
@@ -191,15 +202,46 @@ input {
 
 .filtersContainer {
     position: absolute;
+    display: none;
     background-color: red;
     height: 200px;
     width: 57px;
     z-index: 2;
     margin-left: 442px;
     margin-top: 300px;
-    background-color: #fafafa;
+    background-color: #cacaca;
     border-left: 2px solid #cacaca;
 }
+
+.grayscaleButton {
+    height: 57px;
+    width: 57px;
+    background-size: 57px 57px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    background-image: url("http://upload.wikimedia.org/wikipedia/en/7/74/Cscr-featured-grayscale.png");
+
+}
+
+.sepiaButton {
+    height: 57px;
+    width: 57px;
+    background-size: 57px 57px;
+    margin-bottom: 10px;
+    background-image: url("http://upload.wikimedia.org/wikipedia/en/7/74/Cscr-featured-grayscale.png");
+
+}
+
+.sepia2Button {
+    height: 57px;
+    width: 57px;
+    background-size: 57px 57px;
+
+    background-image: url("http://upload.wikimedia.org/wikipedia/en/7/74/Cscr-featured-grayscale.png");
+
+}
+
+
 
 .comment {
     text-align: left;

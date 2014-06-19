@@ -8,6 +8,12 @@ var PostView = Parse.View.extend({
 
  
     postTemplate: _.template($('.post-template').text()),
+
+    events: {
+        'click .dotButton'              : 'filterContainer',
+        'click .likeButton'             : 'likeButton',
+        'click .likeButtonClicked'      : 'unclickLikeButton',
+    },
  
  
     initialize: function(){
@@ -24,6 +30,31 @@ var PostView = Parse.View.extend({
             this.$el.html(renderedTemplate);
         }
         
+    },
+
+    filterContainer: function(){
+
+    $('.filtersContainer').toggle();
+
+            
+    },
+
+    likeButton: function(){
+
+    // $('.likeButton').hide();
+    // $('.likeButtonClicked').show();
+    $('.likeButton').css('display','none'); 
+    $('.likeButtonClicked').css('display','inline-block');
+            
+    },
+
+    unclickLikeButton: function(){
+
+    // $('.likeButtonClicked').hide();
+    // $('.likeButton').show();
+    $('.likeButtonClicked').css('display','none'); 
+    $('.likeButton').css('display','inline-block');
+            
     },
  
 });
