@@ -25,6 +25,7 @@ body {
 
 .homeButton {
     display: inline-block;
+    cursor: pointer;
     margin-left: 13%;
     height: 45px;
     width: 45px;
@@ -176,6 +177,7 @@ input {
     background-size: 55px 50px;
     background-image: url("http://s27.postimg.org/6dfhxt1gv/Screen_Shot_2014_06_18_at_10_02_52_PM.png");
     border-right: 2px solid #cacaca;
+    cursor: pointer;
 
 }
 
@@ -187,6 +189,7 @@ input {
     background-size: 55px 50px;
     background-image: url("http://s27.postimg.org/k8idu0l9r/Screen_Shot_2014_06_18_at_10_02_01_PM.png");
     border-right: 2px solid #cacaca;
+    cursor: pointer;
 
 }
 
@@ -197,6 +200,7 @@ input {
     background-size: 55px 50px;
     background-image: url("http://s10.postimg.org/j8z7aq14l/Screen_Shot_2014_06_16_at_8_37_55_PM.png?noCache=1402965494");
     border-left: 2px solid #cacaca;
+    cursor: pointer;
 
 }
 
@@ -214,31 +218,36 @@ input {
 }
 
 .grayscaleButton {
-    height: 57px;
-    width: 57px;
+    height: 52px;
+    width: 52px;
     background-size: 57px 57px;
     margin-bottom: 10px;
     margin-top: 5px;
-    background-image: url("http://upload.wikimedia.org/wikipedia/en/7/74/Cscr-featured-grayscale.png");
-
+    border-radius: 15px;
+    border: 2px solid #807E7C;
+    background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%);
+    cursor: pointer;
 }
 
 .sepiaButton {
-    height: 57px;
-    width: 57px;
+    height: 52px;
+    width: 52px;
     background-size: 57px 57px;
     margin-bottom: 10px;
-    background-image: url("http://upload.wikimedia.org/wikipedia/en/7/74/Cscr-featured-grayscale.png");
-
+    border-radius: 15px;
+    border: 2px solid #6B4007;
+    background: linear-gradient(to bottom, #f9c667 0%,#f79621 100%);
+    cursor: pointer;
 }
 
 .sepia2Button {
-    height: 57px;
-    width: 57px;
+    height: 52px;
+    width: 52px;
     background-size: 57px 57px;
-
-    background-image: url("http://upload.wikimedia.org/wikipedia/en/7/74/Cscr-featured-grayscale.png");
-
+    border-radius: 15px;
+    border: 2px solid #8D0699;
+    background: linear-gradient(to bottom, #fb83fa 0%,#d27edd 100%);    
+    cursor: pointer;
 }
 
 

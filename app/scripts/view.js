@@ -13,6 +13,7 @@ var PostView = Parse.View.extend({
         'click .dotButton'              : 'filterContainer',
         'click .likeButton'             : 'likeButton',
         'click .likeButtonClicked'      : 'unclickLikeButton',
+        'click .grayscaleButton'        : 'grayscaleButton',
     },
  
  
@@ -36,7 +37,6 @@ var PostView = Parse.View.extend({
 
     $('.filtersContainer').toggle();
 
-            
     },
 
     likeButton: function(){
@@ -54,6 +54,22 @@ var PostView = Parse.View.extend({
     // $('.likeButton').show();
     $('.likeButtonClicked').css('display','none'); 
     $('.likeButton').css('display','inline-block');
+            
+    },
+
+    grayscaleButton: function(){
+
+    var currentImg = this.model.attributes.URL;
+
+    fabric.Image.fromURL(currentImg, function(img) {
+    // add filter
+    img.filters.push(new fabric.Image.filters.Grayscale());
+    // apply filters and re-render canvas when done
+    img.applyFilters(canvas.renderAll.bind(canvas));
+    // add image onto canvas
+    canvas.add(img);
+
+    });
             
     },
  
