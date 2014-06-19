@@ -19,6 +19,7 @@ body {
     position: fixed;
     width: 100%;
     background: linear-gradient(to bottom, #4e7ca1 0%,#33638a 100%);
+    z-index: 3;
 
 }
 
@@ -38,7 +39,7 @@ body {
     height: 45px;
     width: 100px;
     background-size: 100px 45px;
-    background-image: url("http://www.userlogos.org/files/logos/jumpordie/instagram_01.png");
+    background-image: url("http://www.clipartbest.com/cliparts/9i4/bXy/9i4bXyMAT.png");
 
 }
 
@@ -154,6 +155,7 @@ input {
 }
 
 .postImage {
+
     display: block;
 
 }
@@ -185,6 +187,18 @@ input {
     background-image: url("http://s10.postimg.org/j8z7aq14l/Screen_Shot_2014_06_16_at_8_37_55_PM.png?noCache=1402965494");
     border-left: 2px solid #cacaca;
 
+}
+
+.filtersContainer {
+    position: absolute;
+    background-color: red;
+    height: 200px;
+    width: 57px;
+    z-index: 2;
+    margin-left: 442px;
+    margin-top: 300px;
+    background-color: #fafafa;
+    border-left: 2px solid #cacaca;
 }
 
 .comment {
