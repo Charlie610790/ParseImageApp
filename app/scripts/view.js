@@ -21,8 +21,8 @@ var PostView = Parse.View.extend({
         $('.postContainer').prepend(this.el);
         this.render();
 
-        collection.on('add', this.render);
-        collection.on('change', this.render);
+        // collection.on('add', this.render);
+        this.model.on('change', this.render.bind(this));
     },
  
     render: function(){
@@ -43,8 +43,8 @@ var PostView = Parse.View.extend({
 
     // $('.likeButton').hide();
     // $('.likeButtonClicked').show();
-    $('.likeButton').css('display','none'); 
-    $('.likeButtonClicked').css('display','inline-block');
+    $('this.likeButton').css('display','none'); 
+    $('this.likeButtonClicked').css('display','inline-block');
             
     },
 
@@ -52,8 +52,8 @@ var PostView = Parse.View.extend({
 
     // $('.likeButtonClicked').hide();
     // $('.likeButton').show();
-    $('.likeButtonClicked').css('display','none'); 
-    $('.likeButton').css('display','inline-block');
+    $('this.likeButtonClicked').css('display','none'); 
+    $('this.likeButton').css('display','inline-block');
             
     },
 

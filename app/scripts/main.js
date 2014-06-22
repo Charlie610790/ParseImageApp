@@ -14,12 +14,23 @@ var collection = new PostCollection();
 
 var viewInstance;
 
-collection.fetch().done(function () {
-	collection.each(function(photo){
-	    viewInstance = new PostView({model: photo});
-		
-	});
+//////////////
+
+collection.on('add', function (post){
+    new PostView({model:post});
 });
+
+//////////////
+
+collection.fetch({add: true}).done(function(){
+});
+
+// collection.fetch().done(function () {
+// 	collection.each(function(photo){
+// 	    viewInstance = new PostView({model: photo});
+		
+// 	});
+// });
 
 //action that happens when the add button is clicked
 $('.addButton').click(function() {

@@ -218,39 +218,48 @@ input {
 }
 
 .grayscaleButton {
-    height: 52px;
+    height: 36px;
     width: 52px;
     background-size: 57px 57px;
     margin-bottom: 10px;
     margin-top: 5px;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 2px solid #807E7C;
     background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%);
     cursor: pointer;
 }
 
 .sepiaButton {
-    height: 52px;
+    height: 36px;
     width: 52px;
     background-size: 57px 57px;
     margin-bottom: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     border: 2px solid #6B4007;
     background: linear-gradient(to bottom, #f9c667 0%,#f79621 100%);
     cursor: pointer;
 }
 
 .sepia2Button {
-    height: 52px;
+    height: 36px;
     width: 52px;
     background-size: 57px 57px;
-    border-radius: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     border: 2px solid #8D0699;
     background: linear-gradient(to bottom, #fb83fa 0%,#d27edd 100%);    
     cursor: pointer;
 }
-
-
+.saveButton {
+    height: 28px;
+    width: 44px;
+    background-size: 57px 57px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: linear-gradient(to bottom, rgba(212,228,239,1) 0%,rgba(134,174,204,1) 100%);    cursor: pointer;
+}
 
 .comment {
     text-align: left;
