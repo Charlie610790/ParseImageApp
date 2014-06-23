@@ -14,6 +14,7 @@ var PostView = Parse.View.extend({
         'click .likeButton'             : 'likeButton',
         'click .likeButtonClicked'      : 'unclickLikeButton',
         'click .grayscaleButton'        : 'grayscaleButton',
+        'click .saveButton'             : 'updateModel',
     },
  
  
@@ -35,7 +36,7 @@ var PostView = Parse.View.extend({
 
     filterContainer: function(){
 
-    $('.filtersContainer').toggle();
+        $('.filtersContainer').toggle();
 
     },
 
@@ -43,8 +44,8 @@ var PostView = Parse.View.extend({
 
     // $('.likeButton').hide();
     // $('.likeButtonClicked').show();
-    $('this.likeButton').css('display','none'); 
-    $('this.likeButtonClicked').css('display','inline-block');
+        $('this.likeButton').css('display','none');
+        $('this.likeButtonClicked').css('display','inline-block');
             
     },
 
@@ -52,25 +53,34 @@ var PostView = Parse.View.extend({
 
     // $('.likeButtonClicked').hide();
     // $('.likeButton').show();
-    $('this.likeButtonClicked').css('display','none'); 
-    $('this.likeButton').css('display','inline-block');
+        $('this.likeButtonClicked').css('display','none');
+        $('this.likeButton').css('display','inline-block');
             
     },
 
     grayscaleButton: function(){
+        $('.postImage').css('display','none');
+        $('#canvas').css('display','block').css('height','500px');
+        var currentImg = this.model.attributes.URL;
 
-    var currentImg = this.model.attributes.URL;
-
-    fabric.Image.fromURL(currentImg, function(img) {
+        fabric.Image.fromURL(currentImg, function(img) {
     // add filter
-    img.filters.push(new fabric.Image.filters.Grayscale());
+            img.filters.push(new fabric.Image.filters.Grayscale());
     // apply filters and re-render canvas when done
-    img.applyFilters(canvas.renderAll.bind(canvas));
+            img.applyFilters(canvas.renderAll.bind(canvas));
     // add image onto canvas
-    canvas.add(img);
+            canvas.add(img);
+            this.model.save();
 
-    });
+        });
             
+    },
+
+    updateModel: function(){
+
+        collection.add(this.model);
+
+        this.model.save();
     },
  
 });
