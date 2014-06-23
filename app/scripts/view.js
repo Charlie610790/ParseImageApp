@@ -59,8 +59,9 @@ var PostView = Parse.View.extend({
     },
 
     grayscaleButton: function(){
-        $('.postImage').css('display','none');
-        $('#canvas').css('display','block').css('height','500px');
+        $('.postImage').replaceWith('<canvas id="canvas" height:"500px" width:"500px"></canvas>')
+        // $('.postImage').css('display','none');
+        // $('#canvas').css('display','block').css('height','500px');
         var currentImg = this.model.attributes.URL;
 
         fabric.Image.fromURL(currentImg, function(img) {
